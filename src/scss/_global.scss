@@ -3,7 +3,6 @@ body {
   font-family: $f-roboto-sans;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding-top: 64px;
 }
 
 code {
@@ -315,37 +314,6 @@ p {
 .white {
   color: $c-text-white;
 }
-.text-italic {
-  @include fontStyle(italic);
-}
-.text-underline {
-  text-decoration: underline;
-}
-
-.check-icon {
-  color: $c-light-green;
-}
-
-.section {
-  margin-bottom: 25px;
-}
-
-.transparent-bg {
-  background: transparent;
-}
-
-.text-spacing {
-  letter-spacing: 2.1px;
-  color: $c-black;
-}
-
-.container {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-.v-height {
-  height: calc(100vh - 62px);
-}
 
 h2,
 h3,
@@ -375,26 +343,28 @@ h5 {
 
 // ----------------------------------
 // Small device
+// Ref - mixin/_breakpoint.scss
 
 @include viewport(min, $min-small) {
-  body {
-    padding-top: 76.3px;
-  }
+  //  Content
+  // write global style
 }
 
 // ----------------------------------
 // Medium device
+// Ref - mixin/_breakpoint.scss
 
 @include viewport(min, $min-medium) {
-  body {
-    padding-top: 76.3px;
-  }
+  //  Content
+  // write global style
 }
 
 // ----------------------------------
 // Large device
+// Ref - mixin/_breakpoint.scss
 
 @include viewport(min, $min-xl) {
+  // h1 is a example for global style below
   h1 {
     @include fontSize(map-get($h1-font-sizes, xl));
   }
@@ -409,7 +379,7 @@ h5 {
   h4 {
     @include fontSize(map-get($h4-font-sizes, xl));
   }
-  .btn.g-button {
+  .button {
     min-width: 155px;
   }
 }
