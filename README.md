@@ -29,7 +29,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ## Ready to use scss in react project with 0 configurations
 
-This repo with 0 configurations including cross browser like normalize css
+This repo with 0 configurations including cross browser css like normalize css
 
 ### `npm run eject`
 
