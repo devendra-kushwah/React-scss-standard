@@ -1,0 +1,9 @@
+// MarketCube.io
+
+// =============================================
+// Function - Black Color
+// =============================================
+
+@function black($opacity) {
+  @return rgba(0, 0, 0, $opacity);
+}

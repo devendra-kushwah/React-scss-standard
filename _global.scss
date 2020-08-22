@@ -1,0 +1,415 @@
+body {
+  margin: 0;
+  font-family: $f-roboto-sans;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-top: 64px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+main {
+  display: block;
+}
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+a:hover {
+  text-decoration: none;
+  color: $c-link-hover;
+}
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+   * Add the correct font size in all browsers.
+   */
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/**
+   * Remove the border on images inside links in IE 10.
+   */
+
+img {
+  border-style: none;
+  max-width: 100%;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+.form-control {
+  background: transparent;
+  border-color: $c-text-white;
+  color: $c-text-white;
+}
+.form-control:focus {
+  box-shadow: none;
+  border-color: $c-text-white;
+  background: transparent;
+  color: $c-text-white;
+}
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+button:focus {
+  outline: 0;
+}
+
+/**
+   * Correct the inability to style clickable types in iOS and Safari.
+   */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+   * Remove the inner border and padding in Firefox.
+   */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+   * Restore the focus styles unset by the previous rule.
+   */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+   * Correct the padding in Firefox.
+   */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+   * 1. Correct the text wrapping in Edge and IE.
+   * 2. Correct the color inheritance from `fieldset` elements in IE.
+   * 3. Remove the padding so developers are not caught out when they zero out
+   *    `fieldset` elements in all browsers.
+   */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+   * Correct the cursor style of increment and decrement buttons in Chrome.
+   */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+   * 1. Correct the odd appearance in Chrome and Safari.
+   * 2. Correct the outline style in Safari.
+   */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+   * Remove the inner padding in Chrome and Safari on macOS.
+   */
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+   * 1. Correct the inability to style clickable types in iOS and Safari.
+   * 2. Change font properties to `inherit` in Safari.
+   */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+   * Add the correct display in Edge, IE 10+, and Firefox.
+   */
+
+details {
+  display: block;
+}
+
+/*
+   * Add the correct display in all browsers.
+   */
+
+summary {
+  display: list-item;
+}
+
+/**
+   * Add the correct display in IE 10+.
+   */
+
+template {
+  display: none;
+}
+
+/**
+   * Add the correct display in IE 10.
+   */
+
+[hidden] {
+  display: none;
+}
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.btn-primary.focus,
+.btn-primary:focus {
+  box-shadow: none;
+}
+
+/*  Icons Color Class */
+
+table .check-icon,
+table .red {
+  font-size: 18px;
+}
+
+li .check-icon,
+li .red {
+  position: absolute;
+  left: 0;
+  top: 4px;
+}
+
+p {
+  @include fontSize(16px);
+  color: $c-text;
+  margin-bottom: 30px;
+}
+
+.btn.focus,
+.btn:focus {
+  box-shadow: none;
+}
+
+// ----------------------------------------
+//  Classes
+// ----------------------------------------
+
+.red {
+  color: $c-pink !important;
+}
+.white {
+  color: $c-text-white;
+}
+.text-italic {
+  @include fontStyle(italic);
+}
+.text-underline {
+  text-decoration: underline;
+}
+
+.check-icon {
+  color: $c-light-green;
+}
+
+.section {
+  margin-bottom: 25px;
+}
+
+.transparent-bg {
+  background: transparent;
+}
+
+.text-spacing {
+  letter-spacing: 2.1px;
+  color: $c-black;
+}
+
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.v-height {
+  height: calc(100vh - 62px);
+}
+
+h2,
+h3,
+h4 {
+  @include fontWeight(400);
+}
+h1 {
+  @include fontSize(map-get($h1-font-sizes, default));
+  @include fontWeight(600);
+  margin-bottom: 15px;
+}
+
+h2 {
+  @include fontSize(map-get($h2-font-sizes, default));
+  margin-bottom: 30px;
+}
+h3 {
+  @include fontSize(map-get($h3-font-sizes, default));
+}
+h4 {
+  @include fontSize(map-get($h4-font-sizes, default));
+}
+h5 {
+  font-size: 13px !important;
+  font-weight: 600;
+}
+
+// ----------------------------------
+// Small device
+
+@include viewport(min, $min-small) {
+  body {
+    padding-top: 76.3px;
+  }
+}
+
+// ----------------------------------
+// Medium device
+
+@include viewport(min, $min-medium) {
+  body {
+    padding-top: 76.3px;
+  }
+}
+
+// ----------------------------------
+// Large device
+
+@include viewport(min, $min-xl) {
+  h1 {
+    @include fontSize(map-get($h1-font-sizes, xl));
+  }
+  h2 {
+    @include fontSize(map-get($h2-font-sizes, xl));
+    font-size: 34px;
+    margin-bottom: 35px;
+  }
+  h3 {
+    @include fontSize(map-get($h3-font-sizes, xl));
+  }
+  h4 {
+    @include fontSize(map-get($h4-font-sizes, xl));
+  }
+  .btn.g-button {
+    min-width: 155px;
+  }
+}

@@ -1,0 +1,25 @@
+.grey-bg-form {
+  background: $contact-form-bg;
+  p,
+  span,
+  label,
+  h2 {
+    color: $c-black;
+  }
+}
+
+@include placeholder {
+  color: $c-input-placeholder;
+  @include fontSize($f-size-s);
+}
+.contact-us {
+  margin-bottom: 30px;
+  p {
+    @include fontSize(16px);
+  }
+  .form-control {
+    height: auto;
+    padding: 14px;
+    color: $c-input-text;
+  }
+}

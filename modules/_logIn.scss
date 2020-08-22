@@ -1,0 +1,121 @@
+// MarketCube.io
+
+// $min-small: 576px;
+// $min-medium: 768px;
+// $min-large: 992px;
+// $min-xl: 1200px;
+// --------------------------------------
+// Mixin Example
+// @include viewport(min, $min-xl)
+// --------------------------------------
+
+.primary-logo {
+  background: black(0.8); // black is a function for rgba black color
+  padding: 10px;
+  display: inline-block;
+  border-radius: 10px;
+}
+.header-content {
+  margin-bottom: 50px;
+  i {
+    @include fontSize(13px);
+  }
+}
+.form-wrapper {
+  h1 {
+    @include fontSize(25px);
+  }
+}
+.reset-button-group .btn {
+  @include fontSize($f-size-s); // $f-size-s = 13px
+  padding: 0;
+  border: 0;
+  transition: all 0.3s ease-in-out;
+}
+.reset-button-group .btn:hover {
+  color: $c-pink !important;
+  text-decoration: none;
+}
+
+.log-in,
+.sign-up {
+  margin-top: -64px; /* Manage body spacing  */
+  .grey-bg-form {
+    background: $white;
+    .form-control {
+      height: auto;
+    }
+  }
+  .form-control {
+    background: $c-input-bg;
+    border-color: $c-input-border;
+  }
+}
+.profile-box {
+  background: $c-grey-3;
+  img {
+    max-width: 380px;
+    margin: 0 auto;
+  }
+  h3 {
+    color: $header-bg;
+    padding: 25px 0;
+    @include fontWeight(600);
+    @include fontSize(25px);
+  }
+}
+
+.box-wrapper {
+  max-width: 600px;
+}
+
+.sub-text-color {
+  color: $c-grey-1 !important;
+}
+.image-box img {
+  object-fit: cover;
+}
+
+.input-group-lg > .input-group-prepend > .input-group-text {
+  padding: 0.5rem 1.3rem;
+}
+.input-group-text .fa {
+  font-size: 16px;
+  color: $c-grey-1;
+}
+.footer-caption {
+  @include fontSize(12px);
+}
+
+.reset-modal {
+  .form-control {
+    padding: 23px 15px;
+  }
+  .btn.g-button {
+    @include fontSize(15px);
+  }
+}
+
+@include viewport(min, $min-small) {
+  .header-content {
+    margin-bottom: 70px;
+  }
+
+  .log-in,
+  .sign-up {
+    margin-top: -76.3px;
+    .form-wrapper {
+      border: 1px solid $c-grey-4;
+      @include radius(10px);
+      h1 {
+        @include radius(10px);
+        letter-spacing: 1.5px;
+        position: absolute;
+        top: -25px;
+        margin-left: -15px;
+        background: $white;
+        padding: 10px 15px;
+      }
+    }
+  }
+}

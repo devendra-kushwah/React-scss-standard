@@ -1,0 +1,138 @@
+// MarketCube.io
+
+// $min-small: 576px;
+// $min-medium: 768px;
+// $min-large: 992px;
+// $min-xl: 1200px;
+// --------------------------------------
+// Mixin Example
+// @include viewport(min, $min-xl)
+// --------------------------------------
+
+.ArticleCopy {
+  padding: 3rem 0;
+  height: 350px;
+  .carousel {
+    position: static;
+  }
+  p {
+    text-rendering: optimizeLegibility;
+  }
+  blockquote {
+    border-radius: 3px;
+    position: relative;
+    font-style: italic;
+    text-align: left;
+    padding-right: 3rem;
+    padding-left: 3rem;
+
+    &:before {
+      @include fontSize(30px);
+      font-family: FontAwesome;
+      position: absolute;
+      top: 0;
+      color: $c-grey-7;
+      content: "\f10d";
+      left: 0;
+    }
+    &:after {
+      @include fontSize(30px);
+      font-family: FontAwesome;
+      position: absolute;
+      top: 0;
+      color: $c-grey-7;
+      content: "\f10e";
+      right: 8px;
+      top: auto;
+      bottom: 13px;
+    }
+  }
+}
+.carousel-control-next {
+  width: auto;
+  opacity: 1;
+}
+.carousel-control-prev {
+  width: auto;
+  opacity: 1;
+}
+.carousel-control-next-icon {
+  @include transition(all 0.3s ease-in-out);
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px solid transparent;
+  background: $white;
+  color: $c-light-green;
+  border-color: $c-light-green;
+
+  &:hover {
+    background: $c-light-green;
+    color: $white;
+  }
+  &:after {
+    @include fontSize(20px);
+    content: "\f177";
+    font-family: fontAwesome;
+    content: "\f178";
+  }
+}
+.carousel-control-prev-icon {
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px solid transparent;
+  background: $white;
+  color: $c-light-green;
+  border-color: $c-light-green;
+  @include transition(all 0.3s ease-in-out);
+  &:hover {
+    background: $c-light-green;
+    color: $white;
+  }
+  &:after {
+    @include fontSize(20px);
+    content: "\f177";
+    font-family: fontAwesome;
+  }
+}
+.carousel-indicators {
+  li {
+    background-color: transparent;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 2px solid $c-light-green;
+  }
+  .active {
+    background-color: $c-light-green;
+  }
+}
+@include viewport(min, $min-medium) {
+  .ArticleCopy {
+    p {
+      @include fontSize(24px);
+    }
+    blockquote {
+      margin: 0rem auto 3rem;
+      padding: 1rem 4rem;
+      &:before {
+        @include fontSize(50px);
+      }
+      &:after {
+        @include fontSize(50px);
+      }
+    }
+  }
+}
+@include viewport(min, $min-large) {
+  .ArticleCopy {
+    blockquote {
+      width: 90%;
+    }
+  }
+}

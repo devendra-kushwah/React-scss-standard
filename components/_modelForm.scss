@@ -1,0 +1,28 @@
+.modal-input {
+  padding: 30px 15px;
+  background: $c-modal-input-bg;
+  color: $c-modal-input;
+  border-color: $c-model-input-border;
+  &:focus {
+    @extend .modal-input;
+  }
+}
+.modal-header {
+  .close {
+    @include radius(50%);
+    position: absolute;
+    border: 2px solid $c-black;
+    padding: 0;
+    width: 35px;
+    right: 32px;
+    height: 35px;
+    top: 30px;
+  }
+}
+
+.modal-wrapper {
+  .modal-content {
+    @include radius(15px);
+    padding: 15px;
+  }
+}

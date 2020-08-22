@@ -1,0 +1,64 @@
+// MarketCube.io
+
+// NOTICE -
+//
+// This source file is for some common Mixins:
+//
+//  fontSize, fontStyle, fontWeight
+//  Border-radius, texTransform
+//
+
+// ---------------------------------------
+// Font
+// ---------------------------------------
+
+@mixin fontSize($size) {
+  font-size: $size;
+}
+
+@mixin fontStyle($value) {
+  font-style: $value;
+}
+
+@mixin fontWeight($value) {
+  font-weight: $value;
+}
+
+// --------------------------------------
+// Border Radius
+// --------------------------------------
+
+@mixin radius($value) {
+  border-radius: $value;
+}
+
+// --------------------------------------
+// Text Transform
+
+@mixin texTransform($value) {
+  @if ($value == upper) {
+    text-transform: uppercase;
+  } @else if ($value == lower) {
+    text-transform: lowercase;
+  } @else if ($value == cap) {
+    text-transform: capitalize;
+  }
+}
+
+// --------------------------------------
+// Transition
+
+@mixin transition($value) {
+  -webkit-transition: $value;
+  transition: $value;
+}
+
+// --------------------------------------
+// Transform
+
+@mixin rotate($value) {
+  transform: rotate($value);
+}
+@mixin translate($x, $y) {
+  transform: translate($x, $y);
+}

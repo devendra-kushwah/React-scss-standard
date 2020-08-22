@@ -1,0 +1,17 @@
+// MarketCube.io
+
+// =============================================
+// Mixin - Breakpoint
+// =============================================
+
+@mixin viewport($breakpoint, $value) {
+  @if ($breakpoint == min) {
+    @media screen and (min-width: $value) {
+      @content;
+    }
+  } @else if ($breakpoint == max) {
+    @media screen and (max-width: $value) {
+      @content;
+    }
+  }
+}

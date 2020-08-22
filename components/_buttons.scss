@@ -1,0 +1,24 @@
+//  Global Button
+
+.btn.g-button {
+  padding: 12px 25px;
+  border-radius: 48px;
+  transition: all 0.3s ease-in-out;
+  border: 0;
+  color: $c-text-white;
+  min-width: 135px;
+  background: $c-button-bg;
+  border: 1px solid transparent;
+  &:hover {
+    background: $c-button-hover-bg;
+    color: $c-button-hover;
+    border-color: $c-button-hover-border;
+  }
+}
+
+.btn.yellow-btn {
+  @include yellowButton;
+}
+.btn.white-btn {
+  @include whiteButton;
+}

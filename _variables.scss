@@ -1,0 +1,172 @@
+// MarketCube.io
+
+// =============================================
+// Primary Break Points
+// =============================================
+
+// Min Width Variables
+
+$min-small: 576px;
+$min-medium: 768px;
+$min-large: 992px;
+$min-xl: 1200px;
+
+// Max Width Variables
+
+$max-small: 575.99px;
+$max-medium: 767.99px;
+$max-large: 991.99px;
+$max-xl: 1199.99px;
+
+// =============================================
+// Brand Colors
+// =============================================
+
+$c-blue: #3399cc;
+$c-light-green: #46b5bf;
+$c-green: rgb(14, 189, 202);
+$c-pink: #ff4361;
+$c-yellow: #e4edc1;
+$c-black: #212529;
+$white: #fff;
+
+$c-gray: #333333;
+$c-grey-1: #7c8692; // using in  log in page
+$c-grey-2: #f2f4f8;
+$c-grey-3: #f3f7fb;
+$c-grey-4: #ccc;
+$c-grey-5: rgb(240, 240, 241);
+$c-grey-6: rgb(207, 216, 216);
+$c-grey-7: #e8e8e8;
+
+// Header
+
+$header-bg: $white;
+$nav-color: $c-black;
+$nav-link-hover: $c-pink;
+
+// Footer
+$footer-bg: #36444f;
+$footer-social-icons: $c-light-green;
+$footer-social-icons-hover: $c-pink;
+
+// Text
+
+$c-text: #666;
+$c-text-gray: #a0a0a0;
+$c-text-white: $white;
+// Primary font color for headings and other non-link text
+$c-text-primary: $c-blue;
+
+// =============================================
+// Buttons Colors
+// =============================================
+
+// Green Buttons
+
+$c-button: $c-text-white;
+$c-button-bg: $c-light-green;
+$c-button-border: transparent;
+
+$c-button-hover-bg: transparent;
+$c-button-hover: $c-button-bg;
+$c-button-hover-border: $c-button-bg;
+
+// Yellow Buttons
+
+$c-ybutton: $c-black;
+$c-ybutton-bg: $c-yellow;
+$c-ybutton-border: transparent;
+
+$c-ybutton-hover-bg: $c-text-white;
+$c-ybutton-hover: $c-black;
+$c-ybutton-hover-border: transparent;
+
+// White Buttons
+
+$c-wbutton: $c-light-green;
+$c-wbutton-bg: $c-text-white;
+$c-wbutton-border: transparent;
+
+$c-wbutton-hover-bg: transparent;
+$c-wbutton-hover: $c-wbutton-bg;
+$c-wbutton-hover-border: $c-wbutton-bg;
+
+// -------------------------------------
+// Forms
+
+$form-bg: #848c94;
+$contact-form-bg: #f2f4f8;
+
+$c-input-border: #e1e5e8;
+$c-input-text: #9ca9b7;
+$c-input-bg: $white;
+$c-input-border-focus: null;
+$c-input-placeholder: #9ca9b7;
+
+$c-modal-input-bg: #f1f2f2;
+$c-modal-input: $c-black;
+$c-model-input-border: #a5a3a5;
+
+// Link
+
+$c-link: $c-black;
+$c-link-hover: $c-pink;
+$c-link-active: $c-link-hover;
+
+// =============================================
+// Typography
+// =============================================
+
+// Font Stacks
+
+$f-roboto-sans: "Roboto", sans-serif;
+
+// Font Sizes
+
+$f-size-xxl: 18px;
+$f-size-xl: 16px;
+$f-size-l: 15px;
+
+$f-size: 14px;
+
+$f-size-s: 13px;
+$f-size-xs: 12px;
+$f-size-xxs: 11px;
+
+// Base Measures
+
+$b-line-height: 1.5;
+$b-margin-bottom: 1.5em;
+
+// --------------------------------------
+// Heading
+
+$h1-font-sizes: (
+  default: 36px,
+  xl: 50px
+);
+
+$h2-font-sizes: (
+  default: 30px,
+  xl: 34px
+);
+$h3-font-sizes: (
+  default: 25px,
+  xl: 34px
+);
+$h4-font-sizes: (
+  default: 17px,
+  xl: 18px
+);
+$h5-font-sizes: (
+  default: 13px
+);
+// Headings
+
+$c-h1: $c-black;
+$c-h2: $c-black;
+$c-h3: $c-black;
+$c-h4: $c-black;
+$c-h5: $c-black;
+$c-h6: $c-black;

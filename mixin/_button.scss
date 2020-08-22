@@ -1,0 +1,41 @@
+// MarketCube.io
+
+// --------------------------------------
+// Buttons
+// --------------------------------------
+
+// Green
+
+@mixin greenButton {
+  background: $c-button;
+  color: $c-text-white;
+  &:hover {
+    background: transparent;
+    color: $c-button;
+    border-color: $c-button;
+  }
+}
+
+// White
+
+@mixin whiteButton {
+  background: $c-text-white;
+  color: $c-wbutton;
+  &:hover {
+    background: transparent;
+    color: $c-text-white;
+    border-color: $c-button;
+  }
+}
+
+// Yellow
+
+@mixin yellowButton {
+  background: $c-yellow;
+  color: $c-black;
+  &:hover {
+    color: $c-black;
+    background: $c-text-white;
+    border-color: $c-text-white;
+  }
+}

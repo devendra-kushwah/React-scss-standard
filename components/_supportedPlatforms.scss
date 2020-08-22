@@ -1,0 +1,24 @@
+// $min-small: 576px;
+// $min-medium: 768px;
+// $min-large: 992px;
+// $min-xl: 1200px;
+
+// Mixin Example
+// @include viewport(min, $min-xl)
+
+.support-platform {
+  .logo-icons {
+    margin-bottom: 30px;
+  }
+}
+
+@include viewport(min, $min-xl) {
+  .supported-section {
+    margin-bottom: 60px !important;
+  }
+  .support-platform {
+    img {
+      height: auto;
+    }
+  }
+}

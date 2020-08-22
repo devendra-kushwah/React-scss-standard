@@ -1,0 +1,193 @@
+// MarketCube.io
+
+/* ============================================ *
+ * Header
+ * ============================================ */
+
+.header {
+  background: $header-bg;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 999;
+}
+.header .navbar {
+  padding: 15px 0;
+}
+.navbar-dark .navbar-nav .nav-link {
+  @include fontSize(16px);
+  @include transition(all 0.4s ease-in-out);
+  color: rgb(52, 61, 72);
+}
+.navbar-dark .navbar-nav li + li {
+  margin-left: 15px;
+}
+.nav-link {
+  &:hover,
+  &.active {
+    color: $c-pink !important;
+  }
+}
+.logo {
+  max-width: 200px;
+}
+.navbar-dark .navbar-nav .nav-link.free-trial {
+  background: $white;
+  color: $header-bg;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+}
+
+.navbar-nav .sub-menu .dropdown-toggle.nav-link {
+  color: $c-black;
+  padding: 6px 24px;
+}
+
+.show.sub-menu > .dropdown-toggle,
+.main-drop-down.show > .dropdown-toggle {
+  color: $c-pink !important;
+}
+.main-drop-down.show > .dropdown-toggle::after {
+  @include rotate(180deg);
+}
+
+// ----------------------------------------------
+// Max $max-large = 991.99px
+
+@include viewport(max, $max-large) {
+  .mobile-menu {
+    @include transition(all 0.4s ease-in-out);
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    background: white(0.95); // white is a white rgba function
+    width: 85%;
+    max-width: 400px;
+    padding: 50px 15px;
+    right: -400px;
+    z-index: 400;
+  }
+  .mobile-icon {
+    width: 35px;
+    height: 21px;
+  }
+  .menu-line {
+    height: 2px;
+    background: $white;
+  }
+
+  .mobile-menu {
+    &.show {
+      right: 0;
+    }
+    .navbar-collapse {
+      display: block;
+    }
+    .navbar-collapse .navbar-nav li + li {
+      margin-left: 0;
+    }
+    .xs-menu .nav-link {
+      color: $c-pink;
+    }
+    .nav-link.free-trial {
+      background-color: $c-pink;
+      color: $white !important;
+      border-radius: 30px;
+      padding: 10px 50px;
+    }
+    .nav-link {
+      font-size: 17px;
+      color: $c-black;
+    }
+    .dropdown-menu.show {
+      position: static !important;
+      transform: none !important;
+      float: none;
+      background: transparent;
+    }
+  } // mobile-menu close
+
+  .dropdown-menu {
+    border: 0;
+  }
+  .xs-menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: calc(100% - 40px);
+    margin: 0 auto !important;
+    bottom: 40px;
+    text-align: center;
+  }
+  .close-menu {
+    @include fontSize(35px);
+    top: 6px;
+    right: 22px;
+    color: $c-pink;
+  }
+
+  .header-overlay {
+    position: fixed;
+    background: black(0.5); // white is a white rgba function
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+  }
+  .sub-menu {
+    .dropdown-toggle {
+      @include fontSize(15px);
+    }
+  }
+  .show.sub-menu .dropdown-toggle::after {
+    transform: rotate(180deg);
+  }
+}
+
+// Small device
+// $max-small= 575.99px;
+
+@include viewport(max, $max-small) {
+  .sub-menu .dropdown-menu .dropdown-item {
+    @include fontSize(14px);
+  }
+}
+
+@include viewport(min, $min-small) {
+  .logo {
+    max-width: 265px;
+  }
+}
+
+//  Large device
+
+@include viewport(min, $min-large) {
+  .navbar-dark {
+    .navbar-nav .nav-link {
+      color: $nav-color;
+      &.free-trial:hover {
+        color: $white !important;
+        background: $c-pink;
+      }
+    }
+  }
+
+  .dropdown-menu {
+    border-radius: 0 0 5px 5px;
+    min-width: 200px;
+    top: 56px;
+    border-top: 3px solid $c-pink;
+    box-shadow: 0px 8px 20px 0px black(0.1);
+  }
+  .navbar-nav .sub-menu {
+    .dropdown-menu {
+      left: 100%;
+      top: 10px;
+    }
+    .dropdown-toggle::after {
+      transform: rotate(269deg);
+    }
+  }
+}

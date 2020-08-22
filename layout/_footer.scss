@@ -1,0 +1,70 @@
+// MarketCube.io
+
+/* -------------------------------------------- *
+ * Footer
+ */
+
+.home-footer .footer {
+  padding: 135px 0 35px;
+}
+
+.footer {
+  padding: 40px 0 35px;
+  background-color: $footer-bg;
+  * {
+    @include fontSize(13px);
+    color: $white;
+    line-height: 1.5;
+  }
+  p {
+    margin-bottom: 15px;
+  }
+  a:hover {
+    color: $c-link-hover;
+  }
+}
+
+.social-icons {
+  i {
+    @include fontSize(20px);
+    @include transition(all 0.4s ease-in-out);
+    color: $footer-social-icons;
+  }
+  &:hover i {
+    color: $footer-social-icons-hover;
+  }
+}
+
+.footer-logo img {
+  max-width: 160px;
+}
+
+@include viewport(min, $min-small) {
+  .footer-box {
+    padding-top: 3px;
+  }
+}
+
+@include viewport(min, $min-xl) {
+  .footer {
+    padding: 85px 0 75px;
+    * {
+      @include fontSize(14px);
+      line-height: 1.5;
+    }
+  }
+
+  .footer-logo img {
+    max-width: 225px;
+  }
+  h5 {
+    font-size: 16px !important;
+  }
+  .social-icons i {
+    @include fontSize(30px);
+  }
+
+  .footer-box {
+    padding-top: 5px;
+  }
+}
