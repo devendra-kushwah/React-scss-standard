@@ -1,25 +1,16 @@
-.grey-bg-form {
-  background: $contact-form-bg;
-  p,
-  span,
-  label,
-  h2 {
-    color: $c-black;
-  }
-}
-
-@include placeholder {
-  color: $c-input-placeholder;
-  @include fontSize($f-size-s);
-}
+// --------------------------------------
+//  Example
+// --------------------------------------
 .contact-us {
-  margin-bottom: 30px;
-  p {
-    @include fontSize(16px);
+  input {
+    @include fontSize($f-size-s);
   }
-  .form-control {
-    height: auto;
-    padding: 14px;
-    color: $c-input-text;
+  button {
+    @include fontSize($f-size-s);
   }
+  // Example use for placeholder
+  // @include placeholder {
+  //   color: $c-input-placeholder;
+  //   @include fontSize($f-size-s);
+  // }
 }
