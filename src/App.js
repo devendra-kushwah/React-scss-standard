@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        Ready to use scss in react application with 0 wasting time
+        Ready to use scss in react application with 0% wasting time
       </header>
     </div>
   );
