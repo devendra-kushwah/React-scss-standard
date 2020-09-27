@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: $f-roboto-sans;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -13,6 +14,13 @@ code {
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 
 main {
@@ -267,30 +275,10 @@ template {
 [hidden] {
   display: none;
 }
-*,
-:after,
-:before {
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
 
 .btn-primary.focus,
 .btn-primary:focus {
   box-shadow: none;
-}
-
-/*  Icons Color Class */
-
-table .check-icon,
-table .red {
-  font-size: 18px;
-}
-
-li .check-icon,
-li .red {
-  position: absolute;
-  left: 0;
-  top: 4px;
 }
 
 p {
@@ -305,7 +293,7 @@ p {
 }
 
 // ----------------------------------------
-//  Classes
+// Global Classes example
 // ----------------------------------------
 
 .red {
@@ -314,6 +302,10 @@ p {
 .white {
   color: $c-text-white;
 }
+
+// ----------------------------------------
+// Global styling for headings
+// ----------------------------------------
 
 h2,
 h3,
@@ -342,7 +334,7 @@ h5 {
 }
 
 // ----------------------------------
-// Small device
+// Small device (576px)
 // Ref - mixin/_breakpoint.scss
 
 @include viewport(min, $min-small) {
@@ -351,7 +343,7 @@ h5 {
 }
 
 // ----------------------------------
-// Medium device
+// Medium device (768px)
 // Ref - mixin/_breakpoint.scss
 
 @include viewport(min, $min-medium) {
@@ -360,7 +352,7 @@ h5 {
 }
 
 // ----------------------------------
-// Large device
+// Large device    (1200px)
 // Ref - mixin/_breakpoint.scss
 
 @include viewport(min, $min-xl) {
@@ -378,8 +370,5 @@ h5 {
   }
   h4 {
     @include fontSize(map-get($h4-font-sizes, xl));
-  }
-  .button {
-    min-width: 155px;
   }
 }
