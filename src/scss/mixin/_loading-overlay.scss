@@ -17,15 +17,12 @@
   }
 
   &:after {
-    background-image: url("../images/opc-ajax-loader.gif");
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url("../images/opc-ajax-loader.gif") no-repeat center;
     z-index: 3;
   }
 
   &.loading {
     position: relative;
-
     &:before,
     &:after {
       display: block;
